@@ -1,0 +1,40 @@
+
+mySql
+----
+user : admin
+pwd : admin
+
+gcloud config set project massive-pen-123210
+
+gcloud sql connect cloud-sqltest --user=admin
+
+use AssistancePOC
+
+create table context(
+   context_id INT NOT NULL AUTO_INCREMENT,
+   context_name VARCHAR(100) NOT NULL,
+   PRIMARY KEY ( context_id )
+);
+
+create table revenue(
+   organisation VARCHAR(100) NOT NULL,
+   value INT NOT NULL,
+   quantitative VARCHAR(100) NOT NULL
+   
+);
+
+INSERT INTO context (context_id, context_name)
+   VALUES  ( 1, 'revenue');
+
+
+INSERT INTO revenue(organisation, revenue, quantitative) 
+   VALUES  ( 1, 9.9 , 'Billion');
+
+ALTER TABLE revenue RENAME COLUMN 'revenue' TO 'value' INT NOT NULL;
+
+
+create table demo_tbl(
+   demo_id INT NOT NULL AUTO_INCREMENT,
+   demo_txt VARCHAR(500) NOT NULL,
+   
+);
