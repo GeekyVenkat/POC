@@ -11,6 +11,10 @@ public class ServiceResponseDTO {
 	@NonNull
 	private String quantative;
 	
+	private String errorCode;
+	
+	private String errorMessage;
+	
 	public ServiceResponseDTO() {
 		
 	}
@@ -33,5 +37,22 @@ public class ServiceResponseDTO {
 	public void setQuantative(String quantative) {
 		this.quantative = quantative;
 	}
+
+	public String getErrorCode() {
+		return errorCode;
+	}
+
+	public void setErrorCode(String errorCode) {
+		this.errorCode = errorCode;
+	}
+
+	public String getErrorMessage() {
+		return errorMessage;
+	}
+
+	public void setErrorMessage(String errorMessage) {
+		this.errorMessage = errorMessage;
+	}
+	
 	
 }

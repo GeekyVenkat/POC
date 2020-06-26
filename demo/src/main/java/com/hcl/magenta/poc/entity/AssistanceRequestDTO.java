@@ -4,6 +4,7 @@ public class AssistanceRequestDTO {
 
 	private String intent;
 	private String context;
+	private String serviceToken;
 	
 	public AssistanceRequestDTO() {
 		
@@ -30,5 +31,14 @@ public class AssistanceRequestDTO {
 	public void setContext(String context) {
 		this.context = context;
 	}
+
+	public String getServiceToken() {
+		return serviceToken;
+	}
+
+	public void setServiceToken(String serviceToken) {
+		this.serviceToken = serviceToken;
+	}
+	
 
 }
